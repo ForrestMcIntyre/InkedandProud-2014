@@ -89,6 +89,9 @@ header img{
 #toggle, #pageid {
 	display:none;
 }
+.widget{
+	margin-bottom:1em;
+}
 nav.main ul li a{
 	text-decoration:none;
 	color:#000;
@@ -265,7 +268,7 @@ nav.main ul ul li{
 	margin-right:1.06382978723404%;
 }
 .designposting p{
-	margin-bottom:1em;
+	margin-bottom:.5em;
 }
 .postmetadata{
 	font-size:.8em;
@@ -329,6 +332,29 @@ footer{
 .alignright{float:right; text-align:center;}
 .breadcrumbs{margin-bottom:1em;}
 .post-nav{overflow:hidden;}
+
+/* GALLERY STYLES */
+.gallery .wp-caption{
+		display: inline-block;
+		vertical-align: top;
+		width:32%!important;
+		padding: 0% .5% 3% 0;
+	}
+
+	.gallery .wp-caption img{
+		width:100%;
+		height:auto;
+		border-radius: 3px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.9);
+	}
+
+	.gallery .wp-caption .wp-caption-text{
+		height: 2em;
+		text-align:center;
+		font-weight: bold;
+		font-variant: small-caps;
+	}
+
 /* DESKTOP LAYOUT */
   @media all and (min-width:801px) {
 	  nav.main {
@@ -352,19 +378,20 @@ footer{
 		background-color:#3AB0C8;
 		margin-bottom:20px;
 	}
-	#primary{
+	.index #primary,.page #primary{
 		width:21.27659574468085%;
 		float:right;
 		background-color:#3AB0C8;
 		margin-bottom:20px;	
 		padding:1.06382978723404%;
-		text-align:center;
 	}
   }
   
    /* PHONE LAYOUT */ 
   @media all and (max-width:600px) {
-	  
+	.gallery .wp-caption{
+		width:49%!important;
+	}
 	header img{
 		width:100%;
 	}
@@ -414,13 +441,13 @@ footer{
 		float:none;
 	}
 	.maincontent, .singlecontent{
-		width:96.6666666666%;
-		padding:1.66666666666667%;
+		width:96%;
+		padding:3%;
 		float:none;
 	}
-	#primary{
-		width:96.6666666666%;
-		padding:1.66666666666667%;
+	.index #primary, .page #primary{
+		width:96%;
+		padding:3%;
 		float:none;
 	}
   }
