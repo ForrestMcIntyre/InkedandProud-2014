@@ -49,7 +49,7 @@
 </header>
 <div class="navigationitems">
 <img id="toggle" src="<?php bloginfo('template_url'); ?>/images/img-toggle.png" width="25" height="25"	alt="Toggle Menu">
-<h1 id="pageid"> GALLERY</h1>
+<h1 id="pageid">MENU</h1>
 	<!-- START NAVIGATION -->
 	<nav class="main">
         <?php wp_nav_menu( array( 

@@ -89,7 +89,6 @@ header img{
 #toggle, #pageid {
 	display:none;
 }
-
 nav.main ul li a{
 	text-decoration:none;
 	color:#000;
@@ -111,7 +110,8 @@ nav.main ul li{
 nav.main ul li a{
 	display:block;
 }
-nav.main ul li.current{
+nav.main ul.menu > li.current-menu-item,
+nav.main ul.menu > li.current-page-ancestor{
 	background-color:#2C8497;
 	color:#fff;
 }
@@ -194,7 +194,8 @@ nav.main ul ul li{
 #home-right p  {
 	padding:0;
 }
-#primary{
+.index #primary,
+.page #primary{
 	width:31.27659574468085%;
 	float:right;
 	background-color:#3AB0C8;
@@ -202,21 +203,26 @@ nav.main ul ul li{
 	padding:1.06382978723404%;
 	text-align:left;
 }
-#primary ul{
+.index #primary ul,
+.page #primary ul{
 	list-style:none;
 	overflow:hidden;
 }
 
-#primary a{
+.index #primary a,
+.page #primary a{
 	text-decoration:none;
 	color:#000;
 }
-#primary a:hover,
-#primary a:focus{
+.index #primary a:hover,
+.index #primary a:focus,
+.page #primary a:hover,
+.page #primary a:focus{
+	padding:4px;
 	background-color:#0F2C32;
 	color:#fff;
 }
-#singlesidebar{
+.single #primary{
 	width:21.27659574468085%;
 	float:right;
 	background-color:#3AB0C8;
@@ -224,16 +230,16 @@ nav.main ul ul li{
 	padding:1.06382978723404%;
 	text-align:left;
 }
-#singlesidebar ul{
+.single #primary ul{
 	list-style:none;
 	overflow:hidden;
 }
-#singlesidebar a{
+.single #primary a{
 	text-decoration:none;
 	color:#000;
 }
-#singlesidebar a:hover,
-#singlesidebar a:focus{
+.single #primary a:hover,
+.single #primary a:focus{
 	background-color:#0F2C32;
 	color:#fff;
 }
@@ -241,7 +247,7 @@ nav.main ul ul li{
 	margin-bottom:1em;	
 }
 .maincontent {
-	width:64.01914893617021%;
+	width:63.82978723404255%;
 	padding:1.06382978723404%;
 	float:left;	
 	background-color:#3AB0C8;
@@ -319,6 +325,10 @@ nav.secondary a:focus {
 footer{
 	text-align:center;
 }
+.alignleft{float:left; text-align:center;}
+.alignright{float:right; text-align:center;}
+.breadcrumbs{margin-bottom:1em;}
+.post-nav{overflow:hidden;}
 /* DESKTOP LAYOUT */
   @media all and (min-width:801px) {
 	  nav.main {
@@ -359,14 +369,13 @@ footer{
 		width:100%;
 	}
 	  
-	#navigationitems{
-		overflow:hidden;
+	.navigationitems{
 		clear:both;
+		margin-bottom:.8em;
 	}
 	#toggle{
 		display:inline;
 		float:left;
-		padding-top:5px;
 	}
 	#pageid{
 		display:inline;
@@ -400,11 +409,11 @@ footer{
 	nav.main ul li:hover ul{
 		display:none;
 	}
-	#blogwidget, #aboutwidget, #gallerywidget, #customwidget{
+	#home-left, #right-widgets, #home-center, #home-right, #gallerywidget, #customwidget{
 		width:100%;
 		float:none;
 	}
-	.maincontent{
+	.maincontent, .singlecontent{
 		width:96.6666666666%;
 		padding:1.66666666666667%;
 		float:none;

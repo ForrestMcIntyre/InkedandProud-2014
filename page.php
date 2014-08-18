@@ -1,11 +1,17 @@
 <?php get_header(); ?>
 
-<!-- START SIDEBAR -->
-<?php get_sidebar(); ?>
-<!-- END SIDEBAR -->
+
 
 <!-- START CONTENT -->
 <div id="content" class="page">
+<div class="maincontent">
+    <div class="breadcrumbs">
+      <?php if(function_exists('bcn_display'))
+    {
+        bcn_display();
+    }?>
+    </div>
+
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	<div id="post-<?php the_ID(); ?>">
         <h2><?php the_title(); ?></h2>     
@@ -16,8 +22,10 @@
 	</div>
    
 	<?php endwhile; endif; ?>  
-    <?php comments_template(); ?>
 </div>
 <!-- END CONTENT -->
-
+<!-- START SIDEBAR -->
+<?php get_sidebar('primary'); ?>
+</div>
+<!-- END SIDEBAR -->
 <?php get_footer(); ?>
