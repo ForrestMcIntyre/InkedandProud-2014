@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-</div>
 <!-- START CONTENT -->
 <?php if (have_posts()) : ?>
 

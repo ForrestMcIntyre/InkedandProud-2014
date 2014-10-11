@@ -2,16 +2,6 @@
 /*
 Template Name: Front Page
 */
-
-/*
-This is an example page that calls the secondary sidebar. 
-It's based on sample.php.
-
-Change the template name to whatever you want, by re-naming the file and editing line 3, above.
-
-You can call a unique header, sidebar, footer, etc. 
-as shown in the get_sidebar example, below.
-*/
 ?>
 <?php  get_header(); ?>
 <div id="content">
